@@ -1,23 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import InputField from "./component/InputField";
 
 function App() {
   return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+    <div className="flex items-center justify-center w-full h-screen bg-slate-900">
+      <div className="w-full p-5 bg-white lg:rounded-md h-screen lg:h-[500px] lg:w-[50%]  ">
+        <InputField />
+      </div>
     </div>
   );
 }
