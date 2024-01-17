@@ -77,9 +77,7 @@ const InputField = () => {
   };
 
   const hideList = () => {
-    setTimeout(() => {
-      setShowElement(false);
-    }, [300]);
+    setShowElement(false);
   };
 
   return (
@@ -114,7 +112,7 @@ const InputField = () => {
             type="text"
           />
           {showElement && (
-            <div className="scroll-bar hidden lg:block fixed w-[85%] max-h-[250px] overflow-y-scroll bg-white mt-3 lg:w-[250px] shadow-md">
+            <div className="scroll-bar hidden lg:block fixed w-[85%] max-h-[250px] overflow-y-scroll bg-white mt-1 lg:w-[250px] shadow-md">
               {filteredData.map((curr, i) => {
                 return (
                   <ListCard handleAddTag={handleAddTag} value={curr} key={i} />
@@ -125,7 +123,11 @@ const InputField = () => {
         </div>
       </div>
       {showElement && (
-        <div className="scroll-bar lg:hidden w-full max-h-[250px]  overflow-y-scroll bg-white mt-1 lg:w-[250px] shadow-md">
+        <div
+          className={`${
+            showElement ? "block" : "hidden"
+          } scroll-bar lg:hidden w-full max-h-[250px]  overflow-y-scroll bg-white mt-1 lg:w-[250px] shadow-md`}
+        >
           {filteredData.map((curr, i) => {
             return (
               <ListCard handleAddTag={handleAddTag} value={curr} key={i} />
