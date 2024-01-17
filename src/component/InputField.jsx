@@ -79,12 +79,12 @@ const InputField = () => {
   const hideList = () => {
     setTimeout(() => {
       setShowElement(false);
-    }, [500]);
+    }, [300]);
   };
 
   return (
     <div>
-      <div className="flex border-b-2  border-blue-500 flex-wrap">
+      <div className="flex flex-wrap border-b-2 border-blue-500">
         {/* <div className="flex flex-wrap p-2"> */}
         {selectedData.map((tag, i) => {
           return (
